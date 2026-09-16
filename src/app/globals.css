@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+/* Keep Tailwind's dark utilities aligned with next-themes' class toggle.
+   Without this, a dark operating-system preference can apply dark text
+   colours while the site itself is in light mode. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --font-sans: ui-rounded, "Nunito", "Arial Rounded MT Bold", ui-sans-serif, system-ui, sans-serif;
+  --color-navy: #172554; --color-cream: #fffaf4; --color-pink: #d93878;
+  --color-pink-strong: #bd2363; --color-pink-soft: #fde7f0; --color-sky: #63b9dd;
+  --color-mint: #79c9a3; --color-yellow: #f8c754; --color-foreground-soft: #536078;
+}
+
+:root {
+  color-scheme: light;
+  --page-bg: #f8fafc;
+  --page-text: #172554;
+  --surface: #ffffff;
+  --surface-muted: #fdf6f9;
+  --border-subtle: #dbe3ef;
+  --shadow-soft: rgb(23 37 84 / 8%);
+}
+.dark {
+  color-scheme: dark;
+  --page-bg: #0f172a;
+  --page-text: #fffaf4;
+  --surface: rgb(30 41 59 / 70%);
+  --surface-muted: rgb(15 23 42 / 50%);
+  --border-subtle: #334155;
+  --shadow-soft: rgb(0 0 0 / 16%);
+}
+* { border-color: rgb(226 232 240); }
+html { scroll-behavior: smooth; }
+body { min-width: 320px; background: var(--page-bg); color: var(--page-text); font-family: ui-rounded, "Nunito", "Arial Rounded MT Bold", ui-sans-serif, system-ui, sans-serif; }
+input, select, textarea { color-scheme: inherit; }
+button, a, input, select, textarea { -webkit-tap-highlight-color: transparent; }
+:focus-visible { outline: 3px solid rgb(217 56 120 / 55%); outline-offset: 3px; }
+.section-shell { width: min(100% - 2rem, 76rem); margin-inline: auto; }
+.soft-card { border: 1px solid var(--border-subtle); background: var(--surface); box-shadow: 0 12px 32px var(--shadow-soft); }
+.dark .soft-card { border-color: var(--border-subtle); background: var(--surface); box-shadow: 0 12px 32px var(--shadow-soft); }
+.blob-shape { position: absolute; border-radius: 58% 42% 45% 55% / 48% 53% 47% 52%; background: rgb(217 56 120 / 13%); filter: blur(.2px); }
+@media (min-width: 640px) { .section-shell { width: min(100% - 3rem, 76rem); } }
+@media (prefers-reduced-motion: reduce) { *, ::before, ::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; } }
