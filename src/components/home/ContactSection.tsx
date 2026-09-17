@@ -10,7 +10,7 @@ const contactDetails = [
   { title: "Call us", value: "060 422 3149", href: "tel:0604223149", icon: Phone },
   { title: "Call us", value: "072 155 2225", href: "tel:0721552225", icon: Phone },
   { title: "Email us", value: "bunnybuddiesplayschool@gmail.com", href: "mailto:bunnybuddiesplayschool@gmail.com", icon: Mail },
-  { title: "Visit us", value: "Eldorado Park Ext 4", icon: MapPin },
+  { title: "Visit us", value: "64 Minerton street Eldorado Park Ext 4", icon: MapPin },
 ];
 
 export function ContactSection() {
