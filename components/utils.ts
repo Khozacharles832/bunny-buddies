@@ -13,19 +13,6 @@ export const siteImages = {
     "/images/gallery/gallery-5.webp",
     "/images/gallery/gallery-6.webp",
   ],
-  facilities: [
-    "/images/facilities/dance.webp",
-    "/images/facilities/dominoes.webp",
-    "/images/facilities/facility.webp",
-    "/images/facilities/mission.webp",
-    "/images/facilities/program.webp",
-    "/images/facilities/readinghub.webp",
-    "/images/facilities/spring.webp",
-    "/images/facilities/springday-1.webp",
-    "/images/facilities/story-1.webp",
-    "/images/facilities/storytime.webp",
-    "/images/facilities/wacky.webp",
-  ],
 };
 
 export function cn(...classes: Array<string | false | null | undefined>) {
